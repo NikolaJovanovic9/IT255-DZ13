@@ -1,0 +1,26 @@
+<app-nav></app-nav>
+
+<div class="container mt-5">
+
+  <div class="row">
+
+    <div class="col-lg-3 col-auto me-auto">
+      <app-macbook-search [macbookName]="this.macbookName" (myChangemacbookName)="this.macbookName = $event.value">
+      </app-macbook-search>
+      <app-macbook-form [counter]="counter" (incrementEvent)="increment()" (decrementEvent)="decrement()">
+      </app-macbook-form>
+    </div>
+
+    <div class="col-lg-8 col-auto">
+      <app-macbooks [macbookName]="this.macbookName" (cleanSearchAfterDelete)="this.macbookName = null">
+      </app-macbooks>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <h1>macbooks with <b>custom directive</b>:</h1>
+    <app-ng-macbook-for></app-ng-macbook-for>
+  </div>
+
+</div>

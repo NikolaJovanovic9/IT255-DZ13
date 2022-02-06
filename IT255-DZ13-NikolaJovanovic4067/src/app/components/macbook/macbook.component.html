@@ -1,0 +1,18 @@
+<div class="row row-cols-3">
+  <div class='product' *ngFor="let macbook of macbooks | filterPipe: macbookName">
+    <ul>
+      <li>
+        <div class='product2'>
+          <img src="{{ macbook.imageUrl }}" class="card-img-top img-fluid img-thumbnail">
+          <a href="#" (click)="onSelect(macbook)">
+            <h5 class="card-title">{{ macbook.name }}</h5>
+          </a>
+          <p class="text-secondary">{{ macbook.number }} in stock</p>
+          <p>{{ macbook.price | currency:'EUR'}}</p>
+          <input (click)="buy(macbook)" class='kupi' type='submit' value='Kupi'>
+          <input (click)="onDelete(macbook)" class='obrisi' type='submit' value='Obrisi'>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

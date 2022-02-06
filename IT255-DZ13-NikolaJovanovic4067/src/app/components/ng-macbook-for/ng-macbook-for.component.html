@@ -1,0 +1,16 @@
+<div class="row row-cols-3">
+  <div class='product' *ngFor="let macbook of macbooks">
+    <ul>
+      <li>
+        <div class='product2'>
+          <img src="{{ macbook.imageUrl }}" class="card-img-top img-fluid img-thumbnail">
+          <h3> {{macbook.name}} </h3>
+          <p class="text-secondary">{{ macbook.number }} in stock</p>
+          <p>{{ macbook.price | currency:'EUR'}}</p>
+          <input class='kupi' type='submit' value='Kupi'>
+          <input class='obrisi' type='submit' value='Obrisi'>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
